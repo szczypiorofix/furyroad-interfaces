@@ -5,8 +5,19 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "game",
     "browser",
@@ -15,7 +26,24 @@
   ],
   "author": "Piotr Wróblewski (szczypiorofix)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szczypiorofix/furyroad-interfaces.git"
+  },
+  "bugs": {
+    "url": "https://github.com/szczypiorofix/furyroad-interfaces/issues"
+  },
+  "homepage": "https://github.com/szczypiorofix/furyroad-interfaces#readme",
   "dependencies": {
     "@types/node": "^12.7.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.3"
   }
 }
