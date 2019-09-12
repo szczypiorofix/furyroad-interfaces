@@ -1,14 +1,14 @@
 
 # furyroad-interfaces
 
-This is a set of interfaces and enums which I use on my browser game - Fury Road.
+This is a set of interfaces and enums for my browser game - Fury Road.
 
 ## Installation
 
 With [npm](http://npmjs.org) do
 
 ```bash
-$ npm install furyroad-interfaces
+$ npm install furyroad-interfaces --save
 ```
 
 ## License
