@@ -9,7 +9,7 @@ export enum EventResults {
   LOOSE_FOOD,
   LOOSE_SCRAP,
   LOOSE_FUEL,
-  LOOSE_CAR_HEALTH
+  LOOSE_CAR_HEALTH,
 }
 
 export enum EventTypes {
@@ -18,31 +18,31 @@ export enum EventTypes {
   FIGHT,
   ENCOUNTER,
   TERRAIN,
-  INFO
+  INFO,
 }
 
 export enum GameStatsEnum {
-  FUEL = "fuel",
-  WATER = "water",
-  FOOD = "food",
-  SCRAP = "scrap",
-  CARHEALTH = "carHealth",
-  CARMAXHEALTH = "carMaxHealth",
-  CARTEMPERATURE = "carTemperature",
-  CARMAXTEMPERATURE = "carMaxTemperature",
-  DISTANCEDRIVEN = "distanceDriven",
-  ATTACTRATE = "attactRate",
-  DEFENSERATE = "defenseRate"
+  FUEL = 'fuel',
+  WATER = 'water',
+  FOOD = 'food',
+  SCRAP = 'scrap',
+  CARHEALTH = 'carHealth',
+  CARMAXHEALTH = 'carMaxHealth',
+  CARTEMPERATURE = 'carTemperature',
+  CARMAXTEMPERATURE = 'carMaxTemperature',
+  DISTANCEDRIVEN = 'distanceDriven',
+  ATTACTRATE = 'attactRate',
+  DEFENSERATE = 'defenseRate',
 }
 
 export enum MainGameStateTypes {
-  MAIN_MENU = "MAIN_MENU",
-  CONTINUE = "CONTINUE",
-  NEW_GAME = "NEW_GAME",
-  SETTINGS = "SETTINGS",
-  JUNKYARD = "JUNKYARD",
-  ENDGAME = "ENDGAME",
-  SPLASHSCREEN = "SPLASHSCREEN"
+  MAIN_MENU = 'MAIN_MENU',
+  CONTINUE = 'CONTINUE',
+  NEW_GAME = 'NEW_GAME',
+  SETTINGS = 'SETTINGS',
+  JUNKYARD = 'JUNKYARD',
+  ENDGAME = 'ENDGAME',
+  SPLASHSCREEN = 'SPLASHSCREEN',
 }
 
 export interface IGameStats {
@@ -80,24 +80,24 @@ export interface IGameSettings {
 }
 
 interface IResultOfEvent {
-  res:    EventResults,
-  value:  number
+  res: EventResults;
+  value: number;
 }
 
 interface IEventOptions {
-  yesbutton:  string,
-  nobutton:   string
+  yesbutton: string;
+  nobutton: string;
 }
 
 export interface IGameEvent {
-  type:           EventTypes,
-  name:           string,
-  chance:         number, // x / 100 to appear
-  text:           string,
-  attackRate:     number,
-  defenseRate:    number,
-  options:        IEventOptions,
-  result:         { succ: IResultOfEvent[], fail: IResultOfEvent[] }
+  type: EventTypes;
+  name: string;
+  chance: number; // x / 100 to appear
+  text: string;
+  attackRate: number;
+  defenseRate: number;
+  options: IEventOptions;
+  result: { succ: IResultOfEvent[]; fail: IResultOfEvent[] };
 }
 
 export interface IStatToModify {
