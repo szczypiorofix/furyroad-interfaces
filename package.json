@@ -1,6 +1,6 @@
 {
   "name": "furyroad-interfaces",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This is a set o interfaces and enums for my browser game - Fury Road.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -34,11 +34,9 @@
     "url": "https://github.com/szczypiorofix/furyroad-interfaces/issues"
   },
   "homepage": "https://github.com/szczypiorofix/furyroad-interfaces#readme",
-  "dependencies": {
-    "@types/node": "^12.7.5"
-  },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
