@@ -3,4 +3,4 @@ export interface IGameLogin {
   uuid: string;
 }
 
-export const Greeter = (name: string) => `Hello ${name}`; 
+export const Greeter = (name: string) => `Hello ${name}`;

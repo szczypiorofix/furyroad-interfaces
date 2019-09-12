@@ -1,17 +1,17 @@
 {
   "name": "furyroad-interfaces",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "This is a set o interfaces and enums for my browser game - Fury Road.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
