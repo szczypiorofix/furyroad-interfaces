@@ -53,15 +53,15 @@ export const defaultStats: IGameStats = {
   defenseRate: 1,
   hoursPassed: 0,
   daysPassed: 0,
-  score: 0
-}
+  score: 0,
+};
 
 export const defaultSettings: IGameSettings = {
   canContinue: true,
   musicOn: true,
   musicVolume: 100,
   offline: false,
-}
+};
 
 export interface IGameStats {
   [key: string]: number;
