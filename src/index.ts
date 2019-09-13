@@ -35,16 +35,6 @@ export enum GameStatsEnum {
   DEFENSERATE = 'defenseRate',
 }
 
-export enum MainGameStateTypes {
-  MAIN_MENU = 'MAIN_MENU',
-  CONTINUE = 'CONTINUE',
-  NEW_GAME = 'NEW_GAME',
-  SETTINGS = 'SETTINGS',
-  JUNKYARD = 'JUNKYARD',
-  ENDGAME = 'ENDGAME',
-  SPLASHSCREEN = 'SPLASHSCREEN',
-}
-
 export interface IGameStats {
   [key: string]: number;
   fuel: number;
@@ -105,20 +95,11 @@ export interface IStatToModify {
   value: number;
 }
 
-export interface IMainMenuState {
-  mode: MainGameStateTypes;
-}
-
 export interface ISavedState {
   gamestats: IGameStats;
   gameeventshistory: IGameEvent[];
   gamesettings: IGameSettings;
   gamelogin: IGameLogin;
-}
-
-export interface IGameRootState {
-  mainmenustate: IMainMenuState;
-  savedstate: ISavedState;
 }
 
 export const Greeter = (name: string) => `Hello ${name}`;
