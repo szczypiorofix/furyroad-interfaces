@@ -102,4 +102,11 @@ export interface ISavedState {
   gamelogin: IGameLogin;
 }
 
+export interface IResponseType {
+  error?: string;
+  msg: string;
+  statusCode: number;
+  data?: any[];
+}
+
 export const Greeter = (name: string) => `Hello ${name}`;
