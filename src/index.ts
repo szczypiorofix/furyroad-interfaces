@@ -35,6 +35,34 @@ export enum GameStatsEnum {
   DEFENSERATE = 'defenseRate',
 }
 
+export const defaultStats: IGameStats = {
+  fuel: 40,
+  maxFuel: 60,
+  water: 20,
+  food: 20,
+  scrap: 0,
+  carHealth: 100,
+  carMaxHealth: 100,
+  carTemperature: 80,
+  carMaxTemperature: 120,
+  distanceDriven: 0,
+  carSpeed: 0,
+  carMaxSpeed: 80,
+  carFuelUsage: 1,
+  attackRate: 1,
+  defenseRate: 1,
+  hoursPassed: 0,
+  daysPassed: 0,
+  score: 0
+}
+
+export const defaultSettings: IGameSettings = {
+  canContinue: true,
+  musicOn: true,
+  musicVolume: 100,
+  offline: false,
+}
+
 export interface IGameStats {
   [key: string]: number;
   fuel: number;
@@ -63,10 +91,10 @@ export interface IGameLogin {
 }
 
 export interface IGameSettings {
-  musicOn: boolean;
-  musicVolume: number;
-  canContinue: boolean;
-  offline: boolean;
+  musicOn: boolean; // true if music is on
+  musicVolume: number; // 0 - 100 music volume
+  canContinue: boolean; // if player could continue last saved game
+  offline: boolean; // false - play offline locally without logging in, true - play online
 }
 
 interface IResultOfEvent {
@@ -100,6 +128,20 @@ export interface ISavedState {
   gameeventshistory: IGameEvent[];
   gamesettings: IGameSettings;
   gamelogin: IGameLogin;
+}
+
+export interface IUser {
+  email: string;
+  password: string;
+  uuid: string;
+  stats: IGameStats;
+}
+
+export interface ILoginResponseType {
+  error?: string;
+  msg: string;
+  statusCode: number;
+  data: IUser;
 }
 
 export interface IResponseType {
