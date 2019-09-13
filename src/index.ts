@@ -88,6 +88,7 @@ export interface IGameStats {
 export interface IGameLogin {
   email: string;
   uuid: string;
+  password: string;
 }
 
 export interface IGameSettings {
