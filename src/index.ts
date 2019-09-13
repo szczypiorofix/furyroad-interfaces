@@ -141,7 +141,7 @@ export interface ILoginResponseType {
   error?: string;
   msg: string;
   statusCode: number;
-  data: IUser;
+  data?: IUser;
 }
 
 export interface IResponseType {
