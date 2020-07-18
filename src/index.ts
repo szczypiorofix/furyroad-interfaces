@@ -92,10 +92,10 @@ export interface IGameLogin {
 }
 
 export interface IGameSettings {
-  musicOn: boolean;             // true if music is on
-  musicVolume: number;          // 0 - 100 music volume
-  canContinue: boolean;         // if player could continue last saved game
-  offline: boolean;             // false - play offline locally without logging in, true - play online
+  musicOn: boolean; // true if music is on
+  musicVolume: number; // 0 - 100 music volume
+  canContinue: boolean; // if player could continue last saved game
+  offline: boolean; // false - play offline locally without logging in, true - play online
 }
 
 interface IResultOfEvent {
@@ -111,7 +111,7 @@ interface IEventOptions {
 export interface IGameEvent {
   type: EventTypes;
   name: string;
-  chance: number;               // x / 100 to appear
+  chance: number; // x / 100 to appear
   text: string;
   attackRate: number;
   defenseRate: number;
