@@ -1,6 +1,6 @@
 {
   "name": "furyroad-interfaces",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "This is a set of interfaces and enums for my browser game - Fury Road.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
