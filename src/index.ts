@@ -151,5 +151,3 @@ export interface IResponseType {
   statusCode: number;
   data: any[];
 }
-
-export const Greeter = (name: string) => `Hello ${name}`;
